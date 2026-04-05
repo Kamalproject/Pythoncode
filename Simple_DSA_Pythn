@@ -1,0 +1,318 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Kamalproject/Pythoncode/blob/main/Simple_DSA_Pythn\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Here In this file I try to solve some Regularly asked DSA question using the Python."
+      ],
+      "metadata": {
+        "id": "JhkXyn9nxAhL"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Write a program in python to Find the sum of digits of a given number.\n",
+        "\n",
+        "num=int(input(\"Enetr a number: \"))\n",
+        "sum=0\n",
+        "while(num>0):\n",
+        "  rem=num%10\n",
+        "  sum=sum+rem\n",
+        "  num=num//10\n",
+        "\n",
+        "print(\"Sum of the digits of this number is \", sum)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9zdNLjBSq2_9",
+        "outputId": "c8615341-e070-4f89-a6f9-5ec402a85d79"
+      },
+      "execution_count": 31,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enetr a number: 23\n",
+            "Sum of the digits of this number is  5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Write a program in python to Reverse a number.\n",
+        "\n",
+        "num=int(input(\"Enter a number: \"))\n",
+        "reverse=0\n",
+        "temp=num\n",
+        "while(temp>0):\n",
+        "  rem=temp%10\n",
+        "  reverse=reverse*10+rem\n",
+        "  temp//=10\n",
+        "print(\"Reverse of number \", num,\" is \", reverse)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ZtmxINcgtEOV",
+        "outputId": "9bc9d1b5-b9a9-4f0e-f2e0-ef8fa002aca7"
+      },
+      "execution_count": 32,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 32\n",
+            "Reverse of number  32  is  23\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Write a program in python to Check whether a number is prime or not.\n",
+        "\n",
+        "number=int(input(\"Enter a number: \"))\n",
+        "count=1\n",
+        "for i in range(1,number):\n",
+        "  if(number%i==0):\n",
+        "    count+=1\n",
+        "if(count==2):\n",
+        "  print(\"Numebr \",number,\" is a Prime number\")\n",
+        "else:\n",
+        "  print(\"Number \",number,\" is not a prime number\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "51df2s3Uti3Q",
+        "outputId": "2b5acef6-bd5d-49ab-cf4a-a5bc9b15098d"
+      },
+      "execution_count": 33,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 123\n",
+            "Number  123  is not a prime number\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Write a program in python to Check a number is Armstrong or not.\n",
+        "\n",
+        "number=int(input(\"Enter a number: \"))\n",
+        "temp=number\n",
+        "sum=0\n",
+        "n=len(str(number))\n",
+        "while(temp>0):\n",
+        "  rem=temp%10\n",
+        "  sum=sum+rem**n\n",
+        "  temp//=10\n",
+        "\n",
+        "if(sum==number):\n",
+        "  print(\"Number \",number,\" is Aramstrong number\")\n",
+        "else:\n",
+        "  print(\"Number\", number,\" is not Aramstrong number\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "owl0pV7zuN0V",
+        "outputId": "4c07cf0e-e8df-4515-9971-2bb46cb1a24a"
+      },
+      "execution_count": 34,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 45\n",
+            "Number 45  is not Aramstrong number\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Write a program in python to Check whether a number is palindrome or not.\n",
+        "\n",
+        "number=int(input(\"Enter a number: \"))\n",
+        "temp=number\n",
+        "reverse=0\n",
+        "\n",
+        "while(temp!=0):\n",
+        "  rem=temp%10\n",
+        "  reverse=reverse*10+rem\n",
+        "  temp//=10\n",
+        "if(number==reverse):\n",
+        "  print(\"Number \",number,\" is Palindrome \")\n",
+        "else:\n",
+        "  print(\"Numbe \",number,\" is not palindrome\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "eOrE3QmewKdg",
+        "outputId": "2caac7eb-1c57-439e-80eb-8c0cdb66793b"
+      },
+      "execution_count": 35,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 34\n",
+            "Numbe  34  is not palindrome\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Write a program in python to Check whether a number is perfect or not.\n",
+        "\n",
+        "number=int(input(\"Enter a number: \"))\n",
+        "sum=0;\n",
+        "for i in range(1,number):\n",
+        "  if(number%i==0):\n",
+        "    sum+=i\n",
+        "if(number==sum):\n",
+        "  print(\"Number \", number,\" is Perfect number\")\n",
+        "else:\n",
+        "  print(f\"Number {number} is not a perfect number\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "E6PDYFoSwylp",
+        "outputId": "2a80ad12-9093-43b3-f65d-ca50548e1cfa"
+      },
+      "execution_count": 42,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 23\n",
+            "Number 23 is not a perfect number\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Write a program in python to generate a Fibonacci series.\n",
+        "\n",
+        "a=int(input(\"Enter a number: \"))\n",
+        "b=int(input(\"Enter another number: \"))\n",
+        "\n",
+        "print(f\"Fibonacci series of number {a},{b} is \")\n",
+        "for i in range (0,5):\n",
+        "  c=a+b\n",
+        "  a=b\n",
+        "  b=c\n",
+        "  print(c,end=\" \")"
+      ],
+      "metadata": {
+        "id": "XnilrUiY9SG9",
+        "outputId": "f7a2ec96-de2b-4316-fa1d-3c85140fa019",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 49,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 1\n",
+            "Enter another number: 2\n",
+            "Fibonacci series of number 1,2 is \n",
+            "3 5 8 13 21 "
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Find all 4 digit numbers which satisfies the condition that, square of\n",
+        "# (First two digit + last two digit) = original number. Eg. if number is 3025 then (30+25)2 =3025.\n",
+        "\n",
+        "number=int(input(\"Enter a number: \"))\n",
+        "temp=number\n",
+        "\n",
+        "rem=temp%100\n",
+        "qs=temp//100\n",
+        "sum=rem+qs\n",
+        "if(sum**2==number):\n",
+        "  print(f\"Number {number} satisfies the condition\")\n",
+        "else:\n",
+        "  print(\"Not satisfy\")"
+      ],
+      "metadata": {
+        "id": "58KPRvhf-5eP",
+        "outputId": "130002be-9ce7-48d2-9eb8-0dab1ab6cdb4",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 57,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 3025\n",
+            "Number 3025 satisfies the condition\n"
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "name": "Welcome To Colab",
+      "toc_visible": true,
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
